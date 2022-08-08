@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{ 
+    int m, n, sum = 0, count = 0;
+    loop1: 
+        for(m = 2; m <= 10; m++)
+        {
+            for(n = m - 1; n > 1; n--)
+            {
+                if(m % n == 0)
+                {
+                    goto loop1;
+                }
+            }
+            sum = sum + m;
+            count++;
+        }
+        printf("The avg:%d", (sum / count));
+        return 0;
+}
